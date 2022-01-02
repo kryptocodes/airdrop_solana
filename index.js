@@ -11,8 +11,9 @@ const {
 
 const newPair = new Keypair()
 
-const publicKey = new PublicKey(newPair_keypair.publicKey).toString()
-const secretKey = newPair_keypair.secretKey
+console.log(newPair)
+const publicKey = new PublicKey(newPair._keypair.publicKey).toString()
+const secretKey = newPair._keypair.secretKey
 
 const getWalletBalance = async () => {
     try {
@@ -47,4 +48,4 @@ const driverFunction = async () => {
     await airDropSol()
     await getWalletBalance()
 }
-
+driverFunction()
